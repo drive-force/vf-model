@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "VVRC Theory: A Dynamic Equilibrium Model of Happiness, Capital, and Population"
+message: "If you use this theory or repository, please cite as below."
+authors:
+  - family-names: "Nuno"
+    given-names: "T. "
+    affiliation: "Independent Researcher"
+abstract: >
+  VVRC (Value Vector–Reaction Coefficient) Theory defines a dynamic system linking
+  happiness (U), capital (K), and population (N) through mutual reaction coefficients.
+  It provides a theoretical framework for sustainable equilibrium in social systems.
+date-released: "2025-11-12"
+repository-code: "https://github.com/drive-force/vvrc_model"
+license: "CC-BY-4.0"
+version: "1.0"
+keywords:
+  - value vector
+  - reaction coefficient
+  - happiness economy
+  - dynamic equilibrium
+  - socio-economic modeling
