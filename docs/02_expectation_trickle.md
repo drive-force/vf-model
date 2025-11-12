@@ -1,4 +1,4 @@
-## 4. 研究意義（Research Significance）
+## 研究意義（Research Significance）
 
 本研究の意義は、従来のトリクルダウン仮説を「富の流下」モデルとしてではなく、  
 **社会的期待の反応構造（expectation–reaction system）として再構築する**点にある。  
