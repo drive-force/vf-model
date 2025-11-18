@@ -2,14 +2,14 @@
 
 ## 価値場理論（Value-Field Theory）モデルノート
 
-*Model Notes for P–K–U–A System (v0.2)*
+*Model Notes for P–K–X–A System (v0.2)*
 
 ---
 
 # 1. モデルの目的
 
 本モデルノートは、価値場理論（Value-Field Theory）における
-**P（背景構造）・K（自由度）・U（選好ベクトル）・A（行為）**
+**P（背景構造）・K（自由度）・X（選好ベクトル）・A（行為）**
 の相互関係を、できる範囲で形式的に整理することを目的とする。
 
 価値場理論は、社会・個人・組織のいずれにも適用可能な
@@ -18,7 +18,7 @@
 
 ---
 
-# 2. 基本構造：P–K–U–A の4変数
+# 2. 基本構造：P–K–X–A の4変数
 
 本理論で扱う主要変数は以下の通り。
 
@@ -26,24 +26,24 @@
 | ----- | ---------------------------- | --------------------------------------- |
 | **P** | 背景構造（Context Field）          | 制度・文化・慣習・環境など、主体から直接は観測されず、期待値として扱われる要因 |
 | **K** | 自由度（Freedom / Capability）    | 主体が行為可能な選択領域。資源・地位・情報など                 |
-| **U** | 選好ベクトル（Preference Direction） | 主体がどちらへ向かおうとするかという「方向」。短期では期待値として扱う     |
-| **A** | 行為（Action）                   | 観測可能な行動。U と反応係数が結合して決まる                 |
+| **X** | 選好ベクトル（Preference Direction） | 主体がどちらへ向かおうとするかという「方向」。短期では期待値として扱う     |
+| **A** | 行為（Action）                   | 観測可能な行動。X と反応係数が結合して決まる                 |
 
 ---
 
-# 3. 期待値としての K と U
+# 3. 期待値としての K と X
 
-自由度 **K** と選好 **U** は、いずれも
+自由度 **K** と選好 **X** は、いずれも
 **短い時間幅では完全に観測できない不確実性を含むため、期待値として扱う。**
 
 [
-K = E[K],\qquad U = E[U]
+K = E[K],\qquad X = E[X]
 ]
 
 ただし、十分に長い期間を取る場合（固定された time window）では、
 ベイズ更新により期待値が実測値に近づき、
 [
-K \approx K_{\text{observed}},\qquad U \approx U_{\text{observed}}
+K \approx K_{\text{observed}},\qquad X \approx X_{\text{observed}}
 ]
 とみなすことができる。
 
@@ -54,7 +54,7 @@ K \approx K_{\text{observed}},\qquad U \approx U_{\text{observed}}
 価値場理論は、以下の循環過程を中心に据える。
 
 [
-P \longrightarrow K \longrightarrow U \longrightarrow A \longrightarrow K \longrightarrow P
+P \longrightarrow K \longrightarrow X \longrightarrow A \longrightarrow K \longrightarrow P
 ]
 
 ### 説明：
@@ -62,10 +62,10 @@ P \longrightarrow K \longrightarrow U \longrightarrow A \longrightarrow K \longr
 1. **P → K**
    背景構造（文化・制度・環境）が、行動可能域（自由度）を規定する。
 
-2. **K → U**
+2. **K → X**
    自由度が、主体の選好方向（何を選びうるか）を形成する。
 
-3. **U → A**
+3. **X → A**
    選好は行為へと反応係数を介して変換される。
 
 4. **A → K**
@@ -78,10 +78,10 @@ P \longrightarrow K \longrightarrow U \longrightarrow A \longrightarrow K \longr
 
 # 5. 反応係数 α(t)
 
-行為 A は、選好 U と反応係数 α(t) によって決定される。
+行為 A は、選好 X と反応係数 α(t) によって決定される。
 
 [
-A(t) = \alpha(t), U(t)
+A(t) = \alpha(t), X(t)
 ]
 
 ここで α(t) は、以下に依存する可能性がある：
@@ -119,13 +119,13 @@ P = E[P(\text{environment},,\text{history},,\text{institutions})]
 本理論は静的均衡を前提としない。
 ただし、背景構造 P の変化が小さく、
 **一定期間（固定された time window）** における変動が緩やかな場合、
-自由度 K と選好 U の更新速度が小さくなり、
+自由度 K と選好 X の更新速度が小さくなり、
 安定した状態として観察されることがある。
 
 このとき、
 
 [
-E[\dot{K}] \approx 0,\quad E[\dot{U}] \approx 0
+E[\dot{K}] \approx 0,\quad E[\dot{X}] \approx 0
 ]
 
 これは「安定性を説明するための現象的事実」であり、
@@ -138,13 +138,13 @@ E[\dot{K}] \approx 0,\quad E[\dot{U}] \approx 0
 行為 A は観測可能な量であり、モデルの中心的な出力である。
 
 行為 A の観測データが十分に蓄積されると、
-自由度 K や選好 U の期待値を逆算（逆推定）することも可能となる。
+自由度 K や選好 X の期待値を逆算（逆推定）することも可能となる。
 
 [
 E[K] \leftarrow \text{Data}(A)
 ]
 [
-E[U] \leftarrow \text{Data}(A)
+E[X] \leftarrow \text{Data}(A)
 ]
 
 ---
@@ -157,8 +157,8 @@ E[U] \leftarrow \text{Data}(A)
 [
 \begin{aligned}
 K_{t+1} &= K_t + g(A_t, P_t) + \epsilon_K \
-U_{t+1} &= h(K_{t+1}, P_t) + \epsilon_U \
-A_t &= \alpha(t), U_t \
+X_{t+1} &= h(K_{t+1}, P_t) + \epsilon_X \
+A_t &= \alpha(t), X_t \
 P_{t+1} &= P_t + \delta(K_{t+1}) + \epsilon_P
 \end{aligned}
 ]
@@ -188,7 +188,7 @@ P_{t+1} &= P_t + \delta(K_{t+1}) + \epsilon_P
 * 背景構造 P の潜在変数化
 * 行為 A への反応係数 α(t) のモデル化
 * 過剰な仮定を避けた最小限の関数 g, h の設計
-* 行動データからの K, U の推定方法
+* 行動データからの K, X の推定方法
 * 必要に応じた部分的安定条件の検討
 
 ---
